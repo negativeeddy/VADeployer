@@ -24,7 +24,7 @@ Install instructions
  ```` 
 6. Follow instructions to login
         
-7. [OPTIONAL] If multiple subscriptions you can set which subscription to use by running
+7. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
  ````
      az account set -s "<subscription name or id>"
  ````
