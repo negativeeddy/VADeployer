@@ -2,7 +2,8 @@
 
 This project provides a docker container definition that allows deployment of a Virtual Assistant without having to install all the dev tool dependencies.
 
-Things you need first 
+## Things you need first 
+
 1. An Azure subscription 
 2. Visual Studio Code
 3. Docker
@@ -10,7 +11,8 @@ Things you need first
 5. Bot name – all lower case no spaces
 6. A Bot password – 16 char, needs upper, lower and special chars
  
-Install instructions
+## Install instructions
+
 1.	Clone https://github.com/negativeeddy/VADeployer
 2.	Open the cloned folder in Visual Studio Code 
 3.	Click Reopen in Container when this pops up 
@@ -32,6 +34,14 @@ Install instructions
 ````
     ./deploy.ps1 -botName <BOTNAME> -botAppPassword <BOTPASSWORD>  -luisAuthoringKey <LUISAUTHKEY>
 ````
+![Container prompt](docs/deployoutput.png)
+
+## Run the bot
+1. Open the azure portal and navigate to the Resource Group that has the name of your bot
+2. Open the Web App Bot resource
+3. Select the Test in Web Chat tab
+4. Chat with your bot! 
+NOTE: the first time you open the tab it may take a minute as the entire app needs to start up for the first time
 
 # Additional Notes
 The Virtual Assistant deployed is based on Virtual Assistant Template v4.6.0.1
