@@ -28,13 +28,13 @@ Install instructions
  ````
      az account set -s "<subscription name or id>"
  ````
-8. change to the MyAssistant project directory
- ````
-     cd ./MyAssistant/MyAssistant
- ````
-9. run the deployment script
+8. run the deployment script
 ````
-    ./Deployment/Scripts/deploy.ps1 -name <BOTNAME> -appPassword <BOTPASSWORD> -luisAuthoringRegion westus -luisAuthoringKey <LUISAUTHKEY> -location westus
+    ./deploy.ps1 -botName <BOTNAME> -botAppPassword <BOTPASSWORD>  -luisAuthoringKey <LUISAUTHKEY>
 ````
 
+# Additional Notes
 The Virtual Assistant deployed is based on Virtual Assistant Template v4.6.0.1
+
+## Azure regions
+This will deploy a virtual assistant to the WestUS Azure region by default and also assumes your LUIS authoring key is in the westus. If you wish to deploy to a different region the deployment script has additional parameters to override the defaults.
