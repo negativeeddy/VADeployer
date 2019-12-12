@@ -1,5 +1,5 @@
 {
-	"name": "C# (.NET Core 2.2)",
+	"name": "C# Virtual Assistant starter",
 	"dockerFile": "Dockerfile",
 	
 	// Use 'settings' to set *default* container specific settings.json values on container create. 
