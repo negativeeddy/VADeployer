@@ -42,11 +42,11 @@ RUN echo INSTALL DOTNET RUNTIME 2.1 \
 && apt-get install -y dotnet-runtime-2.1
 
 # # install bot tools
-# RUN npm install -g ludown luis-apis qnamaker@1.3.1 
+RUN npm install -g ludown luis-apis qnamaker@1.3.1 
 
 # # install dotnet2.1 and dispatch locally because of issue installing dotnet globally
-# RUN cd ~/workspaces/MyAssistant/MyAssistant/MyAssistant \
-#  && npm install botdispatch 
+RUN cd /
+RUN npm install botdispatch 
 
 
 # build the base va

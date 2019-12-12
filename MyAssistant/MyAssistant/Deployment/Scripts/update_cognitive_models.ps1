@@ -75,7 +75,7 @@ foreach ($langCode in $languageMap.Keys) {
             # If the LUIS application id already exists within the model no action will be taken
             if ($dispatch) {
                 Write-Host "> Adding $($luisApp.id) app to dispatch model ... "
-                (dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
+                (dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
                         --type "luis" `
                         --name $luisApp.name `
                         --id $luisApp.appId  `
@@ -103,7 +103,7 @@ foreach ($langCode in $languageMap.Keys) {
             # If the knowledge base id already exists within the model no action will be taken
             if ($dispatch) {
                 Write-Host "> Adding $($kb.id) kb to dispatch model ..."   
-                (dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
+                (dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
                         --type "qna" `
                         --name $kb.name `
                         --id $kb.kbId  `
@@ -150,7 +150,7 @@ foreach ($langCode in $languageMap.Keys) {
         Write-Host "> Updating dispatch model ..."
         Write-Host $(Join-Path $dispatchFolder $langCode "$($dispatch.name).dispatch")
         Write-Host $(Join-Path $dispatchFolder $langCode)
-        dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll refresh `
+        dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll refresh `
             --dispatch $(Join-Path $dispatchFolder $langCode "$($dispatch.name).dispatch") `
             --dataFolder $(Join-Path $dispatchFolder $langCode) 2>> $logFile | Out-Null
 

@@ -122,7 +122,7 @@ foreach ($language in $languageArr)
 		Write-Host "> Initializing dispatch model ..."
 		$dispatchName = "$($name)$($langCode)_Dispatch"
 		$dataFolder = Join-Path $PSScriptRoot .. Resources Dispatch $langCode
-		(dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init `
+		(dotnet ~/node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init `
 			--name $dispatchName `
 			--luisAuthoringKey $luisAuthoringKey `
 			--luisAuthoringRegion $luisAuthoringRegion `
@@ -167,7 +167,7 @@ foreach ($language in $languageArr)
 				if ($useDispatch) {
 					# Add luis app to dispatch
 					Write-Host "> Adding $($lu.BaseName) app to dispatch model ..."
-					(dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
+					(dotnet ~/node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
 						--type "luis" `
 						--name $luisApp.name `
 						--id $luisApp.id  `
@@ -211,7 +211,7 @@ foreach ($language in $languageArr)
 					if ($qnaKb) {
 						if ($useDispatch) {
 							Write-Host "> Adding $($lu.BaseName) kb to dispatch model ..."        
-							(dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
+							(dotnet ~/node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add `
 								--type "qna" `
 								--name $qnaKb.name `
 								--id $qnaKb.id  `
@@ -251,7 +251,7 @@ foreach ($language in $languageArr)
 		Write-Host "$(Join-Path $dataFolder "$($dispatchName).dispatch")"
 		Write-Host $dataFolder
 		Write-Host $language
-		$dispatch = (dotnet ./node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll create `
+		$dispatch = (dotnet ~/node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll create `
 			--dispatch "$(Join-Path $dataFolder "$($dispatchName).dispatch")" `
 			--dataFolder  $dataFolder `
 			--culture $language) 2>> $logFile
