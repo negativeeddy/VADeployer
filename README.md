@@ -34,3 +34,5 @@ Install instructions
 ````
     ./Deployment/Scripts/deploy.ps1 -name <BOTNAME> -appPassword <BOTPASSWORD> -luisAuthoringRegion westus -luisAuthoringKey <LUISAUTHKEY> -location westus
 ````
+
+The Virtual Assistant deployed is based on Virtual Assistant Template v4.6.0.1
