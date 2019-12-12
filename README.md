@@ -13,7 +13,9 @@ Things you need first
 Install instructions
 1.	Clone https://github.com/negativeeddy/VADeployer
 2.	Open the cloned folder in Visual Studio Code 
-3.	Click Reopen in Container when this pops up
+3.	Click Reopen in Container when this pops up 
+   
+   ![Container prompt](CodeReopenInContainer.png)
  
 4.	Create a terminal in VS Code and run the following commands
 5. Log in to the Azure command line
