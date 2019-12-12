@@ -15,7 +15,7 @@ Install instructions
 2.	Open the cloned folder in Visual Studio Code 
 3.	Click Reopen in Container when this pops up 
    
-   ![Container prompt](CodeReopenInContainer.png)
+   ![Container prompt](docs/CodeReopenInContainer.png)
  
 4.	Create a terminal in VS Code and run the following commands
 5. Log in to the Azure command line
