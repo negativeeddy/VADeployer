@@ -5,12 +5,14 @@ This project provides a docker container definition that allows deployment of a 
 ## Things you need first 
 
 1. An [Azure](https://azure.microsoft.com/) subscription 
-2. [Visual Studio Code](https://code.visualstudio.com/)
+2. [Visual Studio Code](https://code.visualstudio.com/)*
 3. [Docker](https://www.docker.com/get-started)
 4. [Luis authoring key](https://www.luis.ai/user/settings)
 5. Bot name – all lower case no spaces
 6. A Bot password – 16 char, needs upper, lower and special chars
- 
+
+\* Visual Studio Code is not strictly required. You can follow the instructions below by creating the container yourself and using an interactive Docker session, but VS Code provides a simple way to automatically build, run, and attach to the container. It also allows for easy browsing, editing and updating of the deployed code.
+
 ## Install instructions
 
 1.	Clone https://github.com/negativeeddy/VADeployer
