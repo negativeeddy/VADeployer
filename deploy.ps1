@@ -24,7 +24,7 @@ if ($minimalCost) {
         -appPassword $botAppPassword `
         -luisAuthoringKey $luisAuthoringKey `
         -luisAuthoringRegion $luisAuthoringRegion `
-        -parametersFile ./scripts/parameters.template.json `
+        -parametersFile ./scripts/minimalcost.parameters.template.json `
         -languages $languages `
         -projDir $projDir `
         -logFile $logFile}
