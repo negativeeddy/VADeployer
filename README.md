@@ -55,4 +55,4 @@ NOTE: the first time you open the tab it may take a minute as the entire app nee
 The Virtual Assistant deployed is based on [Virtual Assistant Template v4.6.0.1](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)
 
 ## Azure regions
-This will deploy a virtual assistant to the WestUS Azure region by default and also assumes your LUIS authoring key is in the westus. If you wish to deploy to a different region the deployment script has additional parameters to override the defaults.
+This will deploy a virtual assistant to the WestUS Azure region by default and also assumes your LUIS authoring key is in the westus. If you wish to deploy to a different region and/or your LUIS key is not in westus, the deploy.ps1 script has additional parameters to override the defaults.
