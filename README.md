@@ -58,3 +58,13 @@ The Virtual Assistant deployed is based on [Virtual Assistant Template v4.6.0.1]
 
 ## Azure regions
 This will deploy a virtual assistant to the WestUS Azure region by default and also assumes your LUIS authoring key is in the westus. If you wish to deploy to a different region and/or your LUIS key is not in westus, the deploy.ps1 script has additional parameters to override the defaults.
+
+## Azure SKUs
+By default the deployment will generate Azure SKUs that are typical of a real deployment (e.g. the App Service will be S1 Standard). If you wish to minimize the cost (e.g. just for quick demo purposes) you can specify the ````-minimalCost```` flag which will change many of the resources to the free/lower-cost versions.
+````
+    ./deploy.ps1 -minimalCost -botName <BOTNAME> -botAppPassword <BOTPASSWORD>  -luisAuthoringKey <LUISAUTHKEY>
+````
+**Warning** When using this flag you will see some side effects due to using the lower tier SKUs
+* You may hit the rate & transaction limits of the various free service tiers when a team is actively developing a bot.
+* You can not have more than one free search service in a subscription
+* The free tier of app service plans will always shut down after a period inactivity. This will cause a significant delay in the first response after the inactivity.
