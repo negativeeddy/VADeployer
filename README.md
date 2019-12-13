@@ -1,13 +1,13 @@
 # Virtual Assistant Deployer
 
-This project provides a docker container definition that allows deployment of a Virtual Assistant without having to install all the dev tool dependencies.
+This project provides a docker container definition that allows deployment of a [Virtual Assistant](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-solution/)  without having to install all the dev tool dependencies.
 
 ## Things you need first 
 
 1. An Azure subscription 
-2. Visual Studio Code
-3. Docker
-4. Luis authoring key
+2. [Visual Studio Code](https://code.visualstudio.com/)
+3. [Docker](https://www.docker.com/get-started)
+4. [Luis authoring key](https://www.luis.ai/user/settings)
 5. Bot name – all lower case no spaces
 6. A Bot password – 16 char, needs upper, lower and special chars
  
@@ -20,11 +20,15 @@ This project provides a docker container definition that allows deployment of a 
    ![Container prompt](docs/CodeReopenInContainer.png)
  
 4.	Create a terminal in VS Code and run the following commands
+
+![Container prompt](docs/VSCodeMenuNewTerminal.png)
+
 5. Log in to the Azure command line
  ````
      az login
  ```` 
 6. Follow instructions to login
+    * the instructions give you a link and a code. Browse to the specified link and enter the code
         
 7. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
  ````
@@ -48,7 +52,7 @@ NOTE: the first time you open the tab it may take a minute as the entire app nee
 2. In the LUIS portal (https://luis.ai), delete the two LUIS apps named for your bot. There should be one marked General and one marked Dispatch.
 
 # Additional Notes
-The Virtual Assistant deployed is based on Virtual Assistant Template v4.6.0.1
+The Virtual Assistant deployed is based on [Virtual Assistant Template v4.6.0.1](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)
 
 ## Azure regions
 This will deploy a virtual assistant to the WestUS Azure region by default and also assumes your LUIS authoring key is in the westus. If you wish to deploy to a different region the deployment script has additional parameters to override the defaults.
