@@ -4,7 +4,7 @@ This project provides a docker container definition that allows deployment of a 
 
 ## Things you need first 
 
-1. An Azure subscription 
+1. An [Azure](https://azure.microsoft.com/) subscription 
 2. [Visual Studio Code](https://code.visualstudio.com/)
 3. [Docker](https://www.docker.com/get-started)
 4. [Luis authoring key](https://www.luis.ai/user/settings)
