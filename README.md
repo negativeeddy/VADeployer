@@ -17,29 +17,39 @@ This project provides a docker container definition that allows deployment of a 
 
 1.	Clone https://github.com/negativeeddy/VADeployer
 2.	Open the cloned folder in Visual Studio Code 
-3.	Click Reopen in Container when this pops up 
+3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. 
    
    ![Container prompt](docs/CodeReopenInContainer.png)
- 
+   
+   If this pop up doesn't appear, check to see if the "Remote - Container" extension in VS Code.
+   To see if the "Remote - Container" extension is insatlled:
+   
+      a. press Ctrl+Shift+X
+      b. Search for "Remote - Container"
+      c. Install the extension if it is not currently installed
+
 4.	Create a terminal in VS Code and run the following commands
 
 ![Container prompt](docs/VSCodeMenuNewTerminal.png)
 
-5. Log in to the Azure command line
+5. Log into Azure using the command line
  ````
      az login
  ```` 
-6. Follow instructions to login
+6. A new window should open. Follow instructions to login
     * the instructions give you a link and a code. Browse to the specified link and enter the code
         
 7. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
  ````
      az account set -s "<subscription name or id>"
  ````
-8. run the deployment script
+8. Run the the following deployment script
 ````
     ./deploy.ps1 -botName <BOTNAME> -botAppPassword <BOTPASSWORD>  -luisAuthoringKey <LUISAUTHKEY>
 ````
+
+"botName" will be the name of your new Resource Group. 
+
 ![Container prompt](docs/deployoutput.png)
 
 ## How to talk to your assistant
