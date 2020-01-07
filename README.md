@@ -20,13 +20,7 @@ This project provides a docker container definition that allows deployment of a 
 3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. 
    
    ![Container prompt](docs/CodeReopenInContainer.png)
-   
-    If this pop up doesn't appear, check to see if your have the correct "Shared Drive" is selected.
-    To get this this setting:
-      a. Right click on the Docker icon on the taskbar and click "Settings".
-      b. Click on "Shared Drives".
-      c. Select the correct drive.
-    
+
 4.	Create a terminal in VS Code and run the following commands
 
 ![Container prompt](docs/VSCodeMenuNewTerminal.png)
