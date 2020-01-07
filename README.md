@@ -20,6 +20,13 @@ This project provides a docker container definition that allows deployment of a 
 3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. 
    
    ![Container prompt](docs/CodeReopenInContainer.png)
+   
+   If this pop up doesn't appear, check to see if the "Remote - Container" extension in VS Code.
+   To see if the "Remote - Container" extension is insatlled:
+   
+      a. press Ctrl+Shift+X
+      b. Search for "Remote - Container"
+      c. Install the extension if it is not currently installed
 
 4.	Create a terminal in VS Code and run the following commands
 
