@@ -78,3 +78,10 @@ By default the deployment will generate Azure SKUs that are typical of a real de
 * You may hit the rate & transaction limits of the various free service tiers when a team is actively developing a bot.
 * You can not have more than one free search service in a subscription
 * The free tier of app service plans will always shut down after a period inactivity. This will cause a significant delay in the first response after the inactivity.
+
+## Contributing
+This project welcomes contributions and suggestions from the community. 
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
