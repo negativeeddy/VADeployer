@@ -17,22 +17,22 @@ This project provides a docker container definition that allows deployment of a 
 
 1.	Clone https://github.com/negativeeddy/VADeployer
 2.	Open the cloned folder in Visual Studio Code 
-3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. 
+3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. This step could take a couple of minutes. The output window at the bottom of the screen will notify you when everything is complete. 
    
    ![Container prompt](docs/CodeReopenInContainer.png)
    
-   If this pop up doesn't appear, check to see if the "Remote - Container" extension in VS Code.
+   If this pop up doesn't appear, check to see if the "Remote - Container" extension is installed in VS Code.
    To see if the "Remote - Container" extension is insatlled:
    
       a. press Ctrl+Shift+X
       b. Search for "Remote - Container"
       c. Install the extension if it is not currently installed
 
-4.	Create a terminal in VS Code and run the following commands
+4.	Create a new terminal in VS Code.
 
 ![Container prompt](docs/VSCodeMenuNewTerminal.png)
 
-5. Log into Azure using the command line
+5. In the newly created terminal, log into Azure 
  ````
      az login
  ```` 
