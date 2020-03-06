@@ -42,8 +42,20 @@ RUN echo INSTALL DOTNET RUNTIME 2.1 \
 && apt-get install -y dotnet-runtime-2.1
 
 # # install bot tools
-RUN npm install -g ludown luis-apis qnamaker@1.3.1 
+RUN npm i -g @microsoft/botframework-cli
+RUN npm i -g luis-apis
 
 # install dispatch locally because of issue installing dotnet globally
-RUN cd /
-RUN npm install botdispatch 
+RUN cd / \
+&& npm install botdispatch 
+
+# clone the latest sample
+RUN git clone https://github.com/microsoft/botframework-solutions.git /workspaces/va
+
+#update the sample scripts to run the locally installed dispatch tool
+RUN cd /workspaces/va/samples/csharp/assistants/virtual-assistant/VirtualAssistantSample/Deployment/Scripts \
+&& pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch create' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll create' | Set-Content './deploy_cognitive_models.ps1'" \
+&& pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch init' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init' | Set-Content './deploy_cognitive_models.ps1'" \
+&& pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch add' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add' | Set-Content './deploy_cognitive_models.ps1'" \
+&& pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch init' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init' | Set-Content './update_cognitive_models.ps1'" \
+&& pwsh -Command "(Get-Content -Path './update_cognitive_models.ps1') -replace 'dispatch add' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add' | Set-Content './update_cognitive_models.ps1'"
