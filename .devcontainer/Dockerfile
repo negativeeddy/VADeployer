@@ -52,7 +52,7 @@ RUN cd / \
 # clone the latest sample
 RUN git clone https://github.com/microsoft/botframework-solutions.git /workspaces/va
 
-#update the sample scripts to run the locally installed dispatch tool
+# update the sample scripts to run the locally installed dispatch tool
 RUN cd /workspaces/va/samples/csharp/assistants/virtual-assistant/VirtualAssistantSample/Deployment/Scripts \
 && pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch create' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll create' | Set-Content './deploy_cognitive_models.ps1'" \
 && pwsh -Command "(Get-Content -Path './deploy_cognitive_models.ps1') -replace 'dispatch init' ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init' | Set-Content './deploy_cognitive_models.ps1'" \
