@@ -16,5 +16,7 @@ cd $workspaceDir/va/VirtualAssistantSample/Deployment/Scripts
 (Get-Content -Path './update_cognitive_models.ps1') -replace 'dispatch init'   ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll init'   | Set-Content './update_cognitive_models.ps1'
 (Get-Content -Path './update_cognitive_models.ps1') -replace 'dispatch add'    ,'dotnet /node_modules/botdispatch/bin/netcoreapp2.1/Dispatch.dll add'    | Set-Content './update_cognitive_models.ps1'
 
+(Get-Content -Path './publish.ps1') -replace 'bin\Release\netcoreapp3.0'    ,'bin\release\netcoreapp3.0'    | Set-Content './publish.ps1'
+
 # prevent the telemetry prompt the first time bf cli is used
 "Y" | bf
