@@ -17,29 +17,39 @@ This project provides a docker container definition that allows deployment of a 
 
 1.	Clone https://github.com/negativeeddy/VADeployer
 2.	Open the cloned folder in Visual Studio Code 
-3.	Click Reopen in Container when this pops up 
+3.	Click "Reopen in Container" when the below pop up appears in the bottom right corner of the screen. This step could take a couple of minutes. The output window at the bottom of the screen will notify you when everything is complete. 
    
    ![Container prompt](docs/CodeReopenInContainer.png)
- 
-4.	Create a terminal in VS Code and run the following commands
+   
+   If this pop up doesn't appear, check to see if the "Remote - Container" extension is installed in VS Code.
+   To see if the "Remote - Container" extension is insatlled:
+   
+      a. press Ctrl+Shift+X
+      b. Search for "Remote - Container"
+      c. Install the extension if it is not currently installed
+
+4.	Create a new terminal in VS Code.
 
 ![Container prompt](docs/VSCodeMenuNewTerminal.png)
 
-5. Log in to the Azure command line
+5. In the newly created terminal, log into Azure 
  ````
      az login
  ```` 
-6. Follow instructions to login
+6. A new window should open. Follow instructions to login
     * the instructions give you a link and a code. Browse to the specified link and enter the code
         
 7. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
  ````
      az account set -s "<subscription name or id>"
  ````
-8. run the deployment script
+8. Run the the following deployment script
 ````
     ./deploy.ps1 -botName <BOTNAME> -botAppPassword <BOTPASSWORD>  -luisAuthoringKey <LUISAUTHKEY>
 ````
+
+"botName" will be the name of your new Resource Group. 
+
 ![Container prompt](docs/deployoutput.png)
 
 ## How to talk to your assistant
@@ -68,3 +78,10 @@ By default the deployment will generate Azure SKUs that are typical of a real de
 * You may hit the rate & transaction limits of the various free service tiers when a team is actively developing a bot.
 * You can not have more than one free search service in a subscription
 * The free tier of app service plans will always shut down after a period inactivity. This will cause a significant delay in the first response after the inactivity.
+
+## Contributing
+This project welcomes contributions and suggestions from the community. 
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
