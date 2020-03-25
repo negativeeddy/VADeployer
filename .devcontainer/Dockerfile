@@ -42,8 +42,9 @@ RUN echo INSTALL DOTNET RUNTIME 2.1 \
 && apt-get install -y dotnet-runtime-2.1
 
 # # install bot tools
-RUN npm install -g ludown luis-apis qnamaker@1.3.1 
+RUN npm i -g @microsoft/botframework-cli
+RUN npm i -g luis-apis
 
 # install dispatch locally because of issue installing dotnet globally
-RUN cd /
-RUN npm install botdispatch 
+RUN cd / \
+&& npm install botdispatch 
