@@ -11,7 +11,7 @@ This document will walk you through how to deploy a Virtual Assistant only using
 2. If you don't already have a Visual Studio Online plan, click the drop down at the top of the screen and select "Create new plan". Fill out the "Create a Billing Plan" blade that appears at the right of the screen. 
 3. Once you have a plan, click the "Create environment" button at the center of the screen. (Note: if you already have VSO environments, this button will be located at the top right of the screen.)
 
-##Picture##
+![Button](docs/CreateEnvironmentButtonVSO.PNG)
 
 
 4. A "Create Environment" blade will appear at the right of the screen.
@@ -21,13 +21,13 @@ This document will walk you through how to deploy a Virtual Assistant only using
     * Pick an idle time. 30 Minutes is a safe choice. 
     * You don't need to change the "Dotfiles"
   
-  ##Picture blade info##
+  ![Blade Info](docs/BladeInfoVSO.PNG)
   
   5. Click "Create". (Note: It will take about 5 Minutes for everything to spin up.)
   
   6. You will need to wait until all the projects are loaded into your environment before continuing. The "va" project should be highlighted green. Your project should look like the picture below. 
   
-  ##Picture of Environment##
+   ![Loaded Projects](docs/LoadedProjectsVSO.PNG)
   
   7. Click the hamburger menu at the top left of the screen. Navigate to "Terminal" --> "New Terminal"
 
