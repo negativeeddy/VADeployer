@@ -33,7 +33,7 @@ This document will walk you through how to deploy a Virtual Assistant only using
 
 ![Container prompt](./VSCodeMenuNewTerminal.png)
 
-5. You will need to wait until all the projects are loaded into your environment before continuing. The "va" project should be highlighted green. Your project should look like the picture below. 
+5. You will need to wait until the project is loaded as shown below. It may not initially have the "va" or "va_src" directories (creating them is the last step of the setup.) Wait until they both appear and you project should look similar to picture below. 
   
    ![Loaded Projects](./LoadedProjectsVSO.PNG)
    
