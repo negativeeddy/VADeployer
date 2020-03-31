@@ -56,7 +56,9 @@ This document will walk you through how to deploy a Virtual Assistant only using
     * Create a password
     * Choose if you want to create a new LUIS Authoring Resource. If you choose "No" you will need to get your [Luis authoring key](https://www.luis.ai/user/settings) from your LUIS service. 
     * Choose your LUIS Authoring Region 
-  (Note: It will take about 20 Minutes to deploy all of the Azure Resources)
+
+  * It will take about 20 Minutes to deploy all of the Azure Resources
+  * The password must be at least 16 characters long and requires an uppercase, lowercase and a special character
 
  5. The terminal will say "Deployment complete." when everything is deployed. 
  
