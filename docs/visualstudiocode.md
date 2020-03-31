@@ -7,8 +7,6 @@ This document will walk you through how to deploy a Virtual Assistant only using
 1. An [Azure](https://azure.microsoft.com/) subscription 
 2. [Visual Studio Code](https://code.visualstudio.com/)*
 3. [Docker](https://www.docker.com/get-started)
-5. Bot name – all lower case no spaces
-6. A Bot password – 16 char, needs upper, lower and special chars
 
 \* Visual Studio Code is not strictly required. You can follow the instructions below by creating the container yourself and using an interactive Docker session, but VS Code provides a simple way to automatically build, run, and attach to the container. It also allows for easy browsing, editing and updating of the deployed code.
 
@@ -60,8 +58,10 @@ This document will walk you through how to deploy a Virtual Assistant only using
     * Create a password
     * Choose if you want to create a new LUIS Authoring Resource. If you choose "No" you will need to get your [Luis authoring key](https://www.luis.ai/user/settings) from your LUIS service. 
     * Choose your LUIS Authoring Region 
-  (Note: It will take about 20 Minutes to deploy all of the Azure Resources)
-
+    
+  * It will take about 20 Minutes to deploy all of the Azure Resources
+  * The password must be at least 16 characters long and requires an uppercase, lowercase and a special character
+  
 5. The terminal will say "Deployment complete." when everything is deployed. 
  
 ## Testing it out
