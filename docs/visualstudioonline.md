@@ -63,5 +63,5 @@ This document will walk you through how to deploy a Virtual Assistant only using
  5. The terminal will say "Deployment complete." when everything is deployed. 
  
 ## Testing it out
-See the *How to talk to your assistant* section in the [README](../readme.md)
+See the *How to talk to your assistant* section in the [README](../README.md)
 
