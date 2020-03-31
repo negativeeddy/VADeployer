@@ -18,7 +18,7 @@ This document will walk you through how to deploy a Virtual Assistant only using
     * Pick a Environment Name
     * In the "Git Repository" field, copy the URL of the VADeployer repo (https://github.com/negativeeddy/VADeployer)
     * For "Instance Type" the "Standard (Linux): 4 cores, 8 GB RAM" Sku will work just fine. 
-    * Pick an idle time. 30 Minutes is a safe choice. 
+    * Choose the 30 Minutes idle time (The deployment process takes ~15 minutes) 
     * You don't need to change the "Dotfiles"
   
   ![Blade Info](docs/BladeInfoVSO.PNG)
