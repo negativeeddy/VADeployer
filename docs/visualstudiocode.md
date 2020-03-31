@@ -39,20 +39,18 @@ This document will walk you through how to deploy a Virtual Assistant only using
    
 ### run the deploy scripts
 
-1. Click the hamburger menu at the top left of the screen. Navigate to "Terminal" --> "New Terminal"
-
-2. In the newly created terminal, log into Azure 
+1. In the newly created terminal, log into Azure 
  ````
      az login
  ```` 
-3. A new window should open. Follow instructions to login
+2. A new window should open. Follow instructions to login
     * the instructions give you a link and a code. Browse to the specified link and enter the code
     
-4. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
+3. [OPTIONAL] If you have multiple subscriptions, you can set which subscription to use by running
  ````
      az account set -s "<subscription name or id>"
  ````
-5. In the same terminal, run the deployment script and follow the prompts. 
+4. In the same terminal, run the deployment script and follow the prompts. 
   ````
  ./deploy.ps1
  ````
@@ -64,7 +62,7 @@ This document will walk you through how to deploy a Virtual Assistant only using
     * Choose your LUIS Authoring Region 
   (Note: It will take about 20 Minutes to deploy all of the Azure Resources)
 
-6. The terminal will say "Deployment complete." when everything is deployed. 
+5. The terminal will say "Deployment complete." when everything is deployed. 
  
 ## Testing it out
 See the *How to talk to your assistant* section in the [README](../readme.md)
