@@ -2,6 +2,8 @@
 
 This project provides a Docker container definition that allows deployment of a [Virtual Assistant](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-solution/)  without having to install all the dev tool dependencies on your local machine.
 
+## UPDATE: The Virtual Assistant Deployer is now available at https://github.com/microsoft/Virtual-Assistant-Deployer/. All future updates will be done in that repo and will not be reflected here.
+
 ## Deploying your Virtual Assistant
 There are two options to quickly getting your Virtual Assistant up and running.
 * [Deploy with Visual Studio Online](docs/visualstudioonline.md) - This is the easiest and simplest and will all happen online. The only thing you need is an Azure Subscription.
